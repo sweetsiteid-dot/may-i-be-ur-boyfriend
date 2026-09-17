@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Something I Want to Tell You 🤍</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<audio id="music" loop>
+    <source src="coffee.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ================================
+     PIN SCREEN
+================================ -->
+
+<div id="pinScreen">
+
+    <div class="pin-box">
+
+        <h1>🤍</h1>
+
+        <h2>A Little Something</h2>
+
+        <p>Only for someone special</p>
+
+        <p>Enter PIN</p>
+
+        <input
+        type="password"
+        id="pinInput"
+        readonly
+        placeholder="••••">
+
+        <div class="keypad">
+
+            <button onclick="addPin('1')">1</button>
+            <button onclick="addPin('2')">2</button>
+            <button onclick="addPin('3')">3</button>
+
+            <button onclick="addPin('4')">4</button>
+            <button onclick="addPin('5')">5</button>
+            <button onclick="addPin('6')">6</button>
+
+            <button onclick="addPin('7')">7</button>
+            <button onclick="addPin('8')">8</button>
+            <button onclick="addPin('9')">9</button>
+
+            <button onclick="clearPin()">⌫</button>
+            <button onclick="addPin('0')">0</button>
+            <button onclick="checkPin()">🤍</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     WEBSITE
+================================ -->
+
+<div id="website" class="hidden">
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            A LITTLE SOMETHING FROM
+        </p>
+
+        <h1>Miguel</h1>
+
+        <div class="heart-line">♡</div>
+
+        <h2>Something I Want to Tell You</h2>
+
+        <h3>For Britney 🤍</h3>
+
+        <p class="hero-text">
+            There’s something I’ve been
+            wanting to tell you for a while.
+        </p>
+
+        <button onclick="openHeart()">
+            Open My Heart 🤍
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     LOVE MESSAGE
+================================ -->
+
+<section id="bottleSection" class="hidden">
+
+    <h2>A Message From My Heart 💌</h2>
+
+    <p class="tap-text">
+        Tap the bottle
+    </p>
+
+    <div id="bottleArea">
+
+        <div id="bottle" onclick="breakBottle()">
+            🧴
+        </div>
+
+        <div id="flowers"></div>
+
+    </div>
+
+
+    <div id="letterContainer">
+
+        <div class="letter-paper">
+
+            <div class="letter-header">
+                <span>For Britney 🤍</span>
+            </div>
+
+            <div id="letterText"></div>
+
+            <div class="letter-signature">
+                — Miguel 🤍
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     GALLERY
+================================ -->
+
+<section class="gallery">
+
+    <p class="section-subtitle">
+        LITTLE PIECES OF US
+    </p>
+
+    <h2>Our Memories 📸</h2>
+
+    <p class="gallery-description">
+        Every picture holds a little memory
+        that I will always keep.
+    </p>
+
+
+    <div class="gallery-grid">
+
+        <img src="photo1.jpg" alt="Memory 1">
+        <img src="photo2.jpg" alt="Memory 2">
+        <img src="photo3.jpg" alt="Memory 3">
+
+        <img src="photo4.jpg" alt="Memory 4">
+        <img src="photo5.jpg" alt="Memory 5">
+        <img src="photo6.jpg" alt="Memory 6">
+
+        <img src="photo7.jpg" alt="Memory 7">
+        <img src="photo8.jpg" alt="Memory 8">
+        <img src="photo9.jpg" alt="Memory 9">
+
+        <img src="photo10.jpg" alt="Memory 10">
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     LOVE QUIZ
+================================ -->
+
+<section class="quiz-section">
+
+    <p class="section-subtitle">
+        ONE LITTLE GAME 🤍
+    </p>
+
+    <h2>One Little Question</h2>
+
+    <p>
+        Answer all questions to unlock
+        your special surprise.
+    </p>
+
+
+    <div id="quizBox">
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question active">
+
+            <h3>
+                Your answer is? 🤍
+            </h3>
+
+            <button onclick="checkAnswer(this,false)">
+                I can’t be ur gf
+            </button>
+
+            <button onclick="checkAnswer(this,true)">
+                YESYESS MAU BANGET I LOVE U
+            </button>
+
+            <button onclick="checkAnswer(this,false)">
+                Gamau
+            </button>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question">
+
+            <h3>
+                Do u want to make more memories wimme? 🥺
+            </h3>
+
+            <button onclick="checkAnswer(this,true)">
+                yes i doo, bebee
+            </button>
+
+            <button onclick="checkAnswer(this,false)">
+                kgk mau ah
+            </button>
+
+            <button onclick="checkAnswer(this,false)">
+                mls
+            </button>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question">
+
+            <h3>
+                I love you soo much, britney 🤍
+            </h3>
+
+            <button onclick="checkAnswer(this,false)">
+                oo iya i love jaehyun more
+            </button>
+
+            <button onclick="checkAnswer(this,false)">
+                gamau jawab ah
+            </button>
+
+            <button onclick="checkAnswer(this,true)">
+                I LOVE YOU MOREE, MIGUELKUU
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUIZ SUCCESS -->
+
+    <div id="quizSuccess" class="hidden">
+
+        <h2>🤍 You Said Yes! 🤍</h2>
+
+        <img
+        src="special.jpg"
+        class="special-photo"
+        alt="Special Memory">
+
+        <p>
+            You unlocked the final memory. 🤍
+        </p>
+
+        <p>
+            I guess I finally have my answer, Britney.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FINAL MESSAGE
+================================ -->
+
+<section class="final">
+
+    <p class="section-subtitle">
+        ONE LAST THING...
+    </p>
+
+    <h2>For You, Britney 🤍</h2>
+
+    <h3>From Miguel</h3>
+
+    <p>
+
+        Honestly i’ve been tryna figure out how to say this
+        without making it sound all cheesy.
+
+        <br><br>
+
+        Sayang, if yk i really really like you.
+        And there’s so many little things about you that i like.
+        The way you talk, the way you laugh, ur random moods,
+        even the dumb little things that we do.
+
+        <br><br>
+
+        I catch myself smiling at my phone because of you.
+        I just feel really good having you in my life.
+        There’s something about you that makes me wanna stay
+        a little longer, know you a little deeper,
+        and be closer to you.
+
+        <br><br>
+
+        I can’t promise i’ll always know what to say or do,
+        but i can promise i’ll always mean what i say to you.
+        And if you let me, i wanna be someone who gets to know
+        every version of you.
+
+        <br><br>
+
+        Soo, may i be ur boyfriend?
+
+        <br><br>
+
+        — Miguel 🤍
+
+    </p>
+
+</section>
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <p>
+        Made with love by Miguel
+    </p>
+
+    <p>
+        For Britney 🤍
+    </p>
+
+</footer>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+  </html>
